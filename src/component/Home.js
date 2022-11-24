@@ -1,11 +1,13 @@
 import React from "react";
-import { Carousel, Container, Row, Col } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
-      <Container>
-        <Row>
-          <Col>
+      <div className="container-fluid ">
+        <div className="row">
+          <div className="col-lg-8">
             <Carousel>
               <Carousel.Item interval={1000}>
                 <img
@@ -36,7 +38,7 @@ const Home = () => {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://img.freepik.com/free-photo/waistup-portrait-cute-beautiful-asian-woman-orange-hoodie-introduce-produce-banner-pointing-blank-white-space-holding-product-smiling-recommend-advertisement-white-background_176420-51222.jpg?w=740&t=st=1669102106~exp=1669102706~hmac=8ab7df55720218b5e1471a685f50784bd0b70e7d2f1f3e921643e10638f8a99a"
+                  src="https://img.freepik.com/free-photo/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall_140725-42636.jpg?w=740&t=st=1669102070~exp=1669102670~hmac=2a1354aff672311daf0774b33b20a8151abc50f4f77ec2497268011da4264d49"
                   alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -48,9 +50,32 @@ const Home = () => {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+          {/* end */}
+          <div className="col-lg-4 bg-light ">
+            <h1 className="text-danger mt-5">Welcome To My Home</h1>
+            <p className="mt-t p-3" style={{ textAlign: "justify" }}>
+              Some dummy content writing here, just for fun.What is Lorem Ipsum?
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type spy.
+            </p>
+            <div className="d-flex gap-5 p-3">
+              <Link className="text-decoration-none text-white" to="/about">
+                <button type="button" className="btn btn-danger">
+                  Image-search
+                </button>
+              </Link>
+              <Link className="text-decoration-none text-white" to="/service">
+                <button type="button" className="btn btn-danger">
+                  Crup-App
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

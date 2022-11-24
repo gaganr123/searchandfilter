@@ -13,39 +13,40 @@ const Header = () => {
       className="p-3"
     >
       <Container>
-        <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/" className="text-decoration-none text-white">
+            React-App
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
               {" "}
               <Link className="text-decoration-none text-white" to="/">
-                Home
+                Dashboard
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
               <Link className="text-decoration-none text-white" to="/about">
-                About
+                Image Search
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
               <Link className="text-decoration-none text-white" to="/service">
-                Service
+                Crud-App
               </Link>
             </Nav.Link>
           </Nav>
           <Nav className="gap-2">
-            <Nav.Link className="btn btn-primary" href="#">
-              Login
-            </Nav.Link>
             <Nav.Link
-              eventKey={2}
-              className="btn btn-light text-black"
-              href="#"
+              className="btn btn-light text-danger"
+              href="tel:9822659471"
+              rel="no-references"
             >
-              Sign up
+              Call Now
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

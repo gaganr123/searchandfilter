@@ -1,15 +1,27 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+
+import Login from "../Login";
+import Dashboard from "../Dashboard";
 const Service = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
+
+  useEffect(() => {
+    setIsAuthenticated(JSON.parse(localStorage.getItem("is_authenticated")));
+  }, []);
+
   return (
     <>
-      <Container>
-        <Row>
-          <Col>
-            <h1 className="mt-5"> Service section</h1>
-          </Col>
-        </Row>
-      </Container>
+      <div className="container bg-light">
+        <div className="row">
+          <div className="col-lg-12">
+            {isAuthenticated ? (
+              <Dashboard setIsAuthenticated={setIsAuthenticated} />
+            ) : (
+              <Login setIsAuthenticated={setIsAuthenticated} />
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

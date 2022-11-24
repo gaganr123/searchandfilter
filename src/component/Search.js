@@ -38,15 +38,19 @@ const Search = ({ details }) => {
   return (
     <section className="garamond">
       <div className="navy georgia ma0 grow">
-        <h2 className="text-center mt-4">Search your course</h2>
+        <h2 className="text-center mt-4">Search any name and email</h2>
       </div>
-      <div className="text-center mt-3">
-        <input
-          className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
-          type="search"
-          placeholder="Search People"
-          onChange={handleChange}
-        />
+      <div className="container">
+        <div className="row  justify-content-center">
+          <div className="col-lg-4  mt-5">
+            <input
+              className="form-control"
+              type="search"
+              placeholder="Search People"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
       </div>
       <div className="container">
         <div className="row">
