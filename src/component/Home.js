@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid ">
-        <div className="row">
+        <div className="row my-3">
           <div className="col-lg-8">
             <Carousel>
               <Carousel.Item interval={1000}>
@@ -61,14 +61,14 @@ const Home = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type spy.
             </p>
-            <div className="d-flex gap-5 p-3">
+            <div className="d-flex gap-5 p-1">
               <Link className="text-decoration-none text-white" to="/about">
-                <button type="button" className="btn btn-danger">
+                <button type="button" className="btn btn-dark">
                   Image-search
                 </button>
               </Link>
               <Link className="text-decoration-none text-white" to="/service">
-                <button type="button" className="btn btn-danger">
+                <button type="button" className="btn btn-dark">
                   Crup-App
                 </button>
               </Link>

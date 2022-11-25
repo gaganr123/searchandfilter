@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import logo from "../image/logo512.png";
 const Header = () => {
   return (
     <Navbar
@@ -15,7 +16,13 @@ const Header = () => {
       <Container>
         <Navbar.Brand>
           <Link to="/" className="text-decoration-none text-white">
-            React-App
+            <img
+              src={logo}
+              alt="logo"
+              className="img-fluid"
+              height="40px"
+              width="40px"
+            />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -46,13 +53,13 @@ const Header = () => {
               </Link>
             </Nav.Link>
           </Nav>
-          <Nav className="gap-2">
+          <Nav>
             <Nav.Link
-              className="btn btn-light text-danger"
+              className="btn btn-light text-dark"
               href="tel:9822659471"
               rel="no-references"
             >
-              Call Now
+              <h6>Call Now</h6>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
-
+import logo from "../image/logo512.png";
 const client = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com/posts",
 });
@@ -156,7 +156,17 @@ const Api = () => {
         {posts.map((post) => {
           return (
             <div className="col-lg-4 col-md-4 d-flex">
-              <div className="card flex-fill p-3 bg-dark" key={post.id}>
+              <div
+                className="card flex-fill p-3 bg-dark align-items-center"
+                key={post.id}
+              >
+                <img
+                  src={logo}
+                  alt="img"
+                  className="img-fluid p-2"
+                  height="auto"
+                  width="150px"
+                />
                 <h2 className="text-center text-light">{post.title}</h2>
                 <p className="text-center text-light">{post.body}</p>
 
