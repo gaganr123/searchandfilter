@@ -39,6 +39,12 @@ const Header = () => {
                 Crud-App
               </Link>
             </Nav.Link>
+            <Nav.Link>
+              {" "}
+              <Link className="text-decoration-none text-white" to="/post">
+                Fetch Api
+              </Link>
+            </Nav.Link>
           </Nav>
           <Nav className="gap-2">
             <Nav.Link

@@ -4,6 +4,7 @@ import Header from "./component/Header";
 import Service from "./component/Service";
 import About from "./component/About";
 import Home from "./component/Home";
+import Api from "./api/Api";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/post" element={<Api />} />
         </Routes>
       </BrowserRouter>
     </>
